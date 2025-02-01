@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="download-ai-brush-removebg-v5xupvjrj.png" alt="logo" class="logo">
+    </header>
+    <div class="main-container">
+    <div class="left-side">
+        <h1 class="judul">Absensi Mahasiswa Di Kegiatan Belajar Mengajar</h1>
+        <p class="subjudul">Silahkan bagi mahasiswa untuk memverifikasi kehadiran nya terlebih dahulu sebelum proses
+        KBM dimulai.</p>
+    </div>
+    <div class="form">
+        <!-- Form content here -->
+        <h1 class="h1">Form Absensi</h1>
+        <!-- Form input here -->
+        <form class="jurusan" action="jurusan" method="post">Jurusan:</form>
+        <div class="select-container1">
+            <select class="select1">
+                <option value="none">Pilih Nama Jurusan</option>
+                <option value="ti">Teknik Informatika</option>
+                <option value="si">Sistem Informasi</option>
+                <option value="bd">Bisnis Digital</option>
+                <option value="ak">Akuntansi</option>
+                </select>
+        </div>
+        <form class="kelas" action="kelas" method="post">Kelas:</form>
+        <div class="select-container2">
+            <select class="select2">
+                <option value="none">Pilih Kelas</option>
+                <option value="ti">1 TIA</option>
+                <option value="si">1 TIB</option>
+                <option value="bd">1 TIC</option>
+                </select>
+        </div>
+        <form class="NIM" action="NIM" method="post">NIM:</form>
+        <div class="divnim">
+            <input class="inpNIM" type="number" name="NIM" placeholder="Masukkan NIM">
+            <button class="btncek" type="submit" id="cekButton" >CEK</button>
+        </div>
+        <form class="nama" action="nama" method="post">Nama:</form>
+        <div class="divnama">
+            <input class="inpNama" type="text" name="inpNama" placeholder="Masukkan nama">
+        </div>
+        <div class="divKBM">
+            <input class="KBM" type="text" name="KBM" placeholder="Masukkan Kode KBM">
+            <form id="form">
+                <button class="btnsubmit" type="submit" >Submit</button>
+            </form>
+            
+        </div>
+        <p class="note">Note: Kode KBM didapatkan melalui dosen pengajar pada
+            setiap jadwal pertemuannya. Pastikan untuk meminta kode KBM melalui
+            dosen yang bersangkutan untuk verifikasi kehadiran</p>
+    </div>
+    <!-- Overlay dan Pop-up -->
+    <div id="overlay" class="overlay">
+        <div class="popup">
+            <img src="centang__1_-removebg-preview.png" alt="centang" class="centang">
+            <p class="popup-text">Absensi Kehadiran Berhasil!</p>
+            <button class="close-btn" onclick="closePopup()">Ok</button>
+        </div>
+    </div>
+    <!-- Tambahan -->
+     <div id="shape-container"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
